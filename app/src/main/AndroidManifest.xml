@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.seensay">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/happylauncher_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/happylauncher_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".TitleScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".elephantactivity" />
+        <activity android:name=".zebraactivity" />
+        <activity android:name=".snakeactivity" />
+        <activity android:name=".rhinoactivity" />
+        <activity android:name=".lionactivity" />
+        <activity android:name=".leopardactivity" />
+        <activity android:name=".hyenaactivity" />
+        <activity android:name=".hippoactivity" />
+        <activity android:name=".crocodileactivity" />
+        <activity android:name=".buffaloactivity" />
+        <activity android:name=".birdactivity" />
+        <activity android:name=".baboonactivity" />
+        <activity android:name=".twelveexplode" />
+        <activity android:name=".elevenexplode" />
+        <activity android:name=".tenexplode" />
+        <activity android:name=".nineexplode" />
+        <activity android:name=".eightexplode" />
+        <activity android:name=".sevenexplode" />
+        <activity android:name=".sixexplode" />
+        <activity android:name=".fiveexplode" />
+        <activity android:name=".fourexplode" />
+        <activity android:name=".threeexplode" />
+        <activity android:name=".twoexplode" />
+        <activity android:name=".oneexplode" />
+        <activity android:name=".catactivity" />
+        <activity android:name=".cowactivity" />
+        <activity android:name=".duckactivity" />
+        <activity android:name=".dogactivity" />
+        <activity android:name=".donkeyacticity" />
+        <activity android:name=".wildmikeactivity" />
+        <activity android:name=".pigactivity" />
+        <activity android:name=".goatactivity" />
+        <activity android:name=".horseactivity" />
+        <activity android:name=".sheepactivity" />
+        <activity android:name=".turkeyactivity" />
+        <activity android:name=".chickenactivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".FarmAnimalActivity" />
+        <activity android:name=".NumbersActivity" />
+        <activity android:name=".WildlifeActivity" />
+    </application>
+
+</manifest>
