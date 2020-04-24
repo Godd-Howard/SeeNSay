@@ -102,7 +102,6 @@ public class FarmAnimalActivity extends AppCompatActivity {
 
         button1 = findViewById(R.id.button1);
         spinner = findViewById(R.id.spinner);
-        spinner.setVisibility(View.INVISIBLE);
 
         animal1pane = findViewById(R.id.animal1pane);
         animal2pane = findViewById(R.id.animal2pane);
@@ -138,7 +137,6 @@ public class FarmAnimalActivity extends AppCompatActivity {
                 button1.setEnabled(false);
                 rando1 = 0;
                 button1.setVisibility(View.INVISIBLE);
-                spinner.setVisibility(View.VISIBLE);
                 RotateAnimation roA = new RotateAnimation(0, 720,
                         RotateAnimation.RELATIVE_TO_SELF, .5f,
                         RotateAnimation.RELATIVE_TO_SELF, .5f);
@@ -162,7 +160,11 @@ public class FarmAnimalActivity extends AppCompatActivity {
                         animals[rando1].setBackgroundColor(-65281);
                         animals[rando1].getBackground().setAlpha(50);
                         Vibrator vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                        vib.vibrate(VibrationEffect.createOneShot(5, 255));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            if (vib != null) {
+                                vib.vibrate(VibrationEffect.createOneShot(5, 255));
+                            }
+                        }
 
                         x = rando1;  // to use for which number to say and explode
                     }
@@ -211,7 +213,7 @@ public class FarmAnimalActivity extends AppCompatActivity {
                                 openActivity2(9);
                             } else if (x == 10) {
                                 mMediaPlayer11.start();
-                                openActivity2(11);
+                                openActivity2(10);
                             } else if (x == 11) {
                                 mMediaPlayer12.start();
                                 openActivity2(11);

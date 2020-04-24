@@ -105,7 +105,6 @@ public class NumbersActivity extends AppCompatActivity {
 
         button1 = findViewById(R.id.button1);
         spinner = findViewById(R.id.spinner);
-        spinner.setVisibility(View.INVISIBLE);
 
         number1pane = findViewById(R.id.number1pane);
         number2pane = findViewById(R.id.number2pane);
@@ -143,7 +142,6 @@ public class NumbersActivity extends AppCompatActivity {
                 button1.setEnabled(false);
                 rando1 = 0;
                 button1.setVisibility(View.INVISIBLE);
-                spinner.setVisibility(View.VISIBLE);
                 RotateAnimation roA = new RotateAnimation(0, 720,
                         RotateAnimation.RELATIVE_TO_SELF, .5f,
                         RotateAnimation.RELATIVE_TO_SELF, .5f);
@@ -157,6 +155,7 @@ public class NumbersActivity extends AppCompatActivity {
                 }
 
                 final Runnable flash = new Runnable() {
+                    @SuppressLint("NewApi")
                     public void run() {
                         numbers[rando1].setBackgroundColor(-65281);
                         numbers[rando1].getBackground().setAlpha(0);
@@ -169,7 +168,11 @@ public class NumbersActivity extends AppCompatActivity {
                         numbers[rando1].setBackgroundColor(-65281);
                         numbers[rando1].getBackground().setAlpha(50);
                         Vibrator vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                        vib.vibrate(VibrationEffect.createOneShot(5, 255));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            if (vib != null) {
+                                vib.vibrate(VibrationEffect.createOneShot(5, 255));
+                            }
+                        }
 
                         x = rando1;  // to use for which number to say and explode
                     }
@@ -240,7 +243,7 @@ public class NumbersActivity extends AppCompatActivity {
                             else if (x == 10)
                             {
                                 mMediaPlayer11.start();
-                                openActivity2(11);
+                                openActivity2(10);
                             }
                             else if (x == 11)
                             {
@@ -271,7 +274,7 @@ public class NumbersActivity extends AppCompatActivity {
         else if (x == 7) intent = new Intent(this, eightexplode.class);
         else if (x == 8) intent = new Intent(this, nineexplode.class);
         else if (x == 9) intent = new Intent(this, tenexplode.class);
-        else if (x == 10) intent = new Intent(this, twelveexplode.class);
+        else if (x == 10) intent = new Intent(this, elevenexplode.class);
         else intent = new Intent(this, twelveexplode.class);
 
         startActivity(intent);

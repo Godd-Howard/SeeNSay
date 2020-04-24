@@ -83,13 +83,15 @@
 
     <ImageView
         android:id="@+id/animal5"
-        android:layout_below="@+id/animal4"
-        android:layout_toLeftOf="@id/animal1"
-        android:layout_marginRight="20dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_below="@+id/animal4"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/animal1"
         android:padding="10dp"
         android:src="@mipmap/pig" />
+
     <ImageView
         android:id="@+id/animal5pane"
         android:layout_width="100dp"
@@ -127,7 +129,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="-50dp"
         android:padding="10dp"
-        android:src="@mipmap/goat" />
+        android:src="@mipmap/goat"
+         />
 
     <ImageView
         android:id="@+id/animal7pane"
@@ -146,7 +149,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/sheep" />
+        android:src="@mipmap/sheep"
+         />
 
     <ImageView
         android:id="@+id/animal8pane"
